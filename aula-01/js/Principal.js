@@ -1,3 +1,4 @@
+class Principal {	
 	function Propriedade3025(var n){
 		
 		var i = n/100;
@@ -262,3 +263,4 @@
 		return ((j == d[10])&&(k == d[11]));
 		
 	}
+}
