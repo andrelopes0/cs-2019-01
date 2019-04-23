@@ -44,14 +44,14 @@ function Mod(x, y) {
 
 function SomaNaturais(n) {
 
-    var i = 2;
-    var s = 1;
+    let i = 2;
+    let s = 1;
     while (i <= n) {
         s = s + i;
         i = i + 1;
     }
+    
     return s;
-
 }
 
 function fatorial(n) {
