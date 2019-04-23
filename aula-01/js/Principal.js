@@ -19,6 +19,8 @@ function Propriedade153(cdu) {
 function DiaDaSemana(dia, mes, ano) {
 
     var s = 0;
+
+    // FIXME nao implementa o algoritmo
     if (mes == 1 || mes == 2) {
         mes = mes + 12;
         ano = ano - 1;
