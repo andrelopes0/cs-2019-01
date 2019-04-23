@@ -1,3 +1,5 @@
+package com.github.andrelopes0.inf.cs.aula1;
+
 public class Principal {
 
     public static boolean propriedade3025(final int n) {
