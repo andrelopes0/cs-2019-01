@@ -35,7 +35,7 @@ function DiaDaSemana(dia, mes, ano) {
 function Mod(x, y) {
 
     var s = x;
-    while (y <= s) {
+    while (s >= y) {
         s = s - y;
     }
     return s;
