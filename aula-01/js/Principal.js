@@ -1,4 +1,4 @@
-function Propriedade3025(n) {
+function propriedade3025(n) {
 
     var i = n / 100;
     var j = n % 100;
