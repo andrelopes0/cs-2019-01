@@ -21,6 +21,7 @@ public class Principal {
     public static int DiaDaSemana(int dia, int mes, int ano) {
 
         int s = 0;
+        // FIXME nao implementa o algoritmo
         if (mes == 1 || mes == 2) {
             mes = mes + 12;
             ano = ano - 1;
@@ -63,7 +64,6 @@ public class Principal {
     }
 
     public static int ProdutoDeInteirosUsandoSomas(int a, int b) {
-
         int totalParcelas = a;
         int parcela = b;
 
@@ -76,13 +76,11 @@ public class Principal {
         int s = 0;
 
         while (i <= totalParcelas) {
-
             s = s + parcela;
             i = i + 1;
-
         }
-        return s;
 
+        return s;
     }
 
     public static int Potencia(int x, int y) {
