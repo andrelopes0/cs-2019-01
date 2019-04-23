@@ -1,11 +1,10 @@
 public class Principal {
 	
-	public static boolean propriedade3025(int n){
+	public static boolean propriedade3025(final int n){
 		
-		int i = n/100;
-		int j = n%100;
+		final int i = n/100;
+		final int j = n%100;
 		return (i+j)*(i+j) == n;
-	
 	}
 	
 	public static boolean Propriedade153(int cdu){
