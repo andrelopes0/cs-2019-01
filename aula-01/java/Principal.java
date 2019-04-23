@@ -1,6 +1,6 @@
 public class Principal {
 	
-	public static boolean Propriedade3025(int n){
+	public static boolean propriedade3025(int n){
 		
 		int i = n/100;
 		int j = n%100;
