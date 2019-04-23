@@ -1,6 +1,6 @@
 function propriedade3025(n) {
 
-    var i = n / 100;
+    var i = Math.floor(n / 100);
     var j = n % 100;
     return (i + j) * (i + j) == n;
 
