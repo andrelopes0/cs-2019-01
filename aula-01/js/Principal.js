@@ -1,9 +1,9 @@
 function propriedade3025(n) {
 
-    var i = Math.floor(n / 100);
-    var j = n % 100;
-    return (i + j) * (i + j) == n;
+    const i = Math.floor(n / 100);
+    const j = n % 100;
 
+    return (i + j) * (i + j) == n;
 }
 
 function Propriedade153(cdu) {
