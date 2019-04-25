@@ -21,12 +21,11 @@ public class Principal {
 		final int du = cdu % 100;
 		final int d = du / 10;
 		final int u = du % 10;
+		
 		return (c * c * c + d * d * d + u * u * u) == cdu;
 	}
 
 	public static int diaDaSemana(int dia, int mes, int ano) {
-
-		// FIXME nao implementa o algoritmo
 		if (mes == 1 || mes == 2) {
 			mes = mes + 12;
 			ano = ano - 1;
@@ -43,6 +42,7 @@ public class Principal {
 		while (y <= s) {
 			s = s - y;
 		}
+		
 		return s;
 	}
 
@@ -65,13 +65,13 @@ public class Principal {
 			f = f * i;
 			i = i + 1;
 		}
+		
 		return f;
 	}
 
 	public static int produtoDeInteirosUsandoSomas(int a, int b) {
 		int totalParcelas = a;
 		int parcela = b;
-
 		if (b < a) {
 			totalParcelas = a;
 			parcela = b;
@@ -79,11 +79,11 @@ public class Principal {
 
 		int i = 1;
 		int s = 0;
-
 		while (i <= totalParcelas) {
 			s = s + parcela;
 			i = i + 1;
 		}
+		
 		return s;
 	}
 
@@ -95,11 +95,11 @@ public class Principal {
 			p = potencia(p, x);
 			i = i + 1;
 		}
+		
 		return p;
 	}
 
 	public static float pi(float n) {
-
 		float i = 1;
 		float s = -1;
 		float d = -1;
