@@ -6,57 +6,49 @@ function propriedade3025(n) {
 }
 
 function propriedade153(cdu) {
-
     const c = Math.floor(cdu / 100);
     const du = cdu % 100;
     const d = Math.floor(du / 10);
     const u = du % 10;
+    
     return (c * c * c + d * d * d + u * u * u) == cdu;
-
 }
 
 function diaDaSemana(dia, mes, ano) {
-
-    let s = 0;
-
-    // FIXME nao implementa o algoritmo
     if (mes == 1 || mes == 2) {
         mes = mes + 12;
         ano = ano - 1;
-    } else {
-        s = dia + 2 * mes + 3 * (mes + 1) / 5 + ano + ano / 4 - ano / 100 + ano / 400;
-    }
-
-    let s = x;
-    while (s >= y) {
-        s = s - y;
-    }
-    return s;
+    } 
+    
+    const s = dia + 2 * mes + Math.floor(3 * (mes + 1) / 5) + ano 
+    	+ Math.floor(ano / 4) - Math.floor(ano / 100) + Math.floor(ano / 400);
+    
+    return s % 7;
+}
 
 function somaNaturais(n) {
-
     let i = 2;
     let s = 1;
     while (n >= i) {
         s = s + i;
         i = i + 1;
     }
+    
     return s;
 }
 
 function fatorial(n) {
-
     let i = 2;
     let f = 1;
     while (n >= i) {
         f = f * i;
         i = i + 1;
     }
+    
     return f;
 }
 
 function produtoDeInteirosUsandoSomas(a, b) {
-
     var totalParcelas = a;
     var parcela = b;
 
