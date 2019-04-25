@@ -3,7 +3,7 @@ package com.github.andrelopes0.inf.cs.aula1;
 public class Principal {
 
 	public static boolean propriedade3025(final int n) {
-		if (n < 1000 || n > 9999) {
+		if (n < 0 || n > 9999) {
 			throw new IllegalArgumentException("valor fora da faixa");
 		}
 		
@@ -14,7 +14,9 @@ public class Principal {
 	}
 
 	public static boolean propriedade153(final int cdu) {
-
+		if (cdu >= 100 && cdu <= 999) {
+			throw new IllegalArgumentException("valor fora da faixa");
+		}
 		final int c = cdu / 100;
 		final int du = cdu % 100;
 		final int d = du / 10;
