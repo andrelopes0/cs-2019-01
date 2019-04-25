@@ -17,6 +17,7 @@ public class Principal {
 		if (cdu >= 100 && cdu <= 999) {
 			throw new IllegalArgumentException("valor fora da faixa");
 		}
+		
 		final int c = cdu / 100;
 		final int du = cdu % 100;
 		final int d = du / 10;
@@ -88,7 +89,6 @@ public class Principal {
 	}
 
 	public static int potencia(int x, int y) {
-
 		int p = 1;
 		int i = 1;
 		while (i <= y) {
@@ -114,7 +114,6 @@ public class Principal {
 	}
 
 	public static float logaritmoNatural(float n, int k) {
-
 		int i = 2;
 		float e = 1 + n;
 		float numerador = n;
@@ -124,11 +123,11 @@ public class Principal {
 			denominador = denominador / denominador;
 			i = i + 1;
 		}
+		
 		return e;
 	}
 
 	public static int razaoAurea(int x, int y, int k) {
-
 		int c = y;
 		int a = x;
 		int i = 1;
@@ -139,46 +138,45 @@ public class Principal {
 			a = t;
 			i = i + 1;
 		}
+		
 		return c / a;
 	}
 
 	public static int quadradoPerfeito(int n) {
-
 		int i = 1;
 		int s = 1;
 		while (s < n) {
 			i = i + 2;
 			s = s + i;
 		}
+		
 		return s = n;
 	}
 
 	public static int raizQuadrada(int n, int i) {
-
 		int r = 1;
 
 		while (0 <= i) {
 			r = (r + n / r) / 2;
 			i = i - 1;
 		}
+		
 		return r;
 	}
 
 	public static boolean primo(int n) {
-
 		int i = 2;
-
 		while (i < n) {
 			if ((n % i) == 0) {
 				return false;
 			}
 			i = i + 1;
 		}
+		
 		return true;
 	}
 
 	public static void crivoEratostenes(int a[], int n) {
-
 		int i = 2;
 		int limite = raizQuadrada(n, 2);
 		int multiplo;
@@ -195,18 +193,17 @@ public class Principal {
 	}
 
 	public static int mdc(int a, int b) {
-
 		int m;
 		while (b != 0) {
 			m = a % b;
 			a = b;
 			b = m;
 		}
+		
 		return a;
 	}
 
 	public static int fibonacci(int n) {
-
 		int a = 0;
 		int c = 1;
 		int i, t;
@@ -221,6 +218,7 @@ public class Principal {
 			a = t;
 			i = i + 1;
 		}
+		
 		return c;
 	}
 
@@ -230,11 +228,11 @@ public class Principal {
 		int k = d[2] + 2 * d[3] + 3 * d[4] + 4 * d[5] + 5 * d[6] + 6 * d[7] + 7 * d[8] + 8 * d[9] + 9 * d[10];
 		int dj = mod(mod(j, 11), 10);
 		int dk = mod(mod(k, 11), 10);
+		
 		return ((dj == d[10]) && (dk == d[11]));
 	}
 
 	public static boolean cpf2(int[] d) {
-
 		int c = 8;
 		int p = d[9];
 		int s = d[9];
