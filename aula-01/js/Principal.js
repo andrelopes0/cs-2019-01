@@ -223,8 +223,6 @@ function cpf(d) {
     return ((dj == d[10]) && (dk == d[11]));
 }
 
-console.log(cpf(09212717608));
-
 function cpf2(d) {
     let c = 8;
     let p = d[9];

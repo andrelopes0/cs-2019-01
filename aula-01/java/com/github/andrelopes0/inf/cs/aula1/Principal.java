@@ -27,6 +27,15 @@ public class Principal {
 	}
 
 	public static int diaDaSemana(int dia, int mes, int ano) {
+		if (1 >= dia && dia <= 31) {
+			throw new IllegalArgumentException("valor 'dia' fora da faixa");
+		}
+		if (1 >= mes && mes <= 12) {
+			throw new IllegalArgumentException("valor 'ano' fora da faixa");
+		}
+		if (ano >= 1753){
+			throw new IllegalArgumentException("valor 'ano' fora da faixa");
+		}
 		if (mes == 1 || mes == 2) {
 			mes = mes + 12;
 			ano = ano - 1;
@@ -38,7 +47,9 @@ public class Principal {
 	}
 
 	public static int mod(int x, int y) {
-
+		if (y >= 0 && x > 0){
+			throw new IllegalArgumentException("algum valor inválido.");
+		}
 		int s = x;
 		while (y <= s) {
 			s = s - y;
@@ -48,7 +59,9 @@ public class Principal {
 	}
 
 	public static int somaNaturais(int n) {
-
+		if (n > 1){
+			throw new IllegalArgumentException("Valor inválido, coloque um valor maior que 1");
+		}
 		int i = 2;
 		int s = 1;
 		while (i <= n) {
@@ -59,7 +72,9 @@ public class Principal {
 	}
 
 	public static int fatorial(int n) {
-
+		if (n > 1){
+			throw new IllegalArgumentException("Valor inválido, coloque um valor maior que 1");
+		}
 		int i = 2;
 		int f = 1;
 		while (i <= n) {
@@ -71,6 +86,9 @@ public class Principal {
 	}
 
 	public static int produtoDeInteirosUsandoSomas(int a, int b) {
+		if (a >= 0 && b >= 0){
+			throw new IllegalArgumentException("Valor inválido.");
+		}
 		int totalParcelas = a;
 		int parcela = b;
 		if (b < a) {
@@ -89,6 +107,9 @@ public class Principal {
 	}
 
 	public static int potencia(int x, int y) {
+		if (x >= 0 && 0 <= y){
+			throw new IllegalArgumentException("Valor inválido.");
+		}
 		int p = 1;
 		int i = 1;
 		while (i <= y) {
@@ -100,6 +121,9 @@ public class Principal {
 	}
 
 	public static float pi(float n) {
+		if (n > 1){
+			throw new IllegalArgumentException("Valor inválido, coloque um valor maior que 1");
+		}
 		float i = 1;
 		float s = -1;
 		float d = -1;
@@ -114,6 +138,9 @@ public class Principal {
 	}
 
 	public static float logaritmoNatural(float n, int k) {
+		if (n >= 1 && 2 <= k){
+			throw new IllegalArgumentException("Valor inválido.");
+		}
 		int i = 2;
 		float e = 1 + n;
 		float numerador = n;
@@ -143,6 +170,9 @@ public class Principal {
 	}
 
 	public static int quadradoPerfeito(int n) {
+		if (n >= 1){
+			throw new IllegalArgumentException("Valor inválido, digite valor >= 1");
+		}
 		int i = 1;
 		int s = 1;
 		while (s < n) {
@@ -154,8 +184,10 @@ public class Principal {
 	}
 
 	public static int raizQuadrada(int n, int i) {
+		if (n > 0){
+			throw new IllegalArgumentException("Valor inválido, digite valor maior que 0");
+		}
 		int r = 1;
-
 		while (0 <= i) {
 			r = (r + n / r) / 2;
 			i = i - 1;
@@ -165,6 +197,9 @@ public class Principal {
 	}
 
 	public static boolean primo(int n) {
+		if (n > 1){
+			throw new IllegalArgumentException("Valor inválido, digite valor maior que 1");
+		}
 		int i = 2;
 		while (i < n) {
 			if ((n % i) == 0) {
@@ -193,6 +228,9 @@ public class Principal {
 	}
 
 	public static int mdc(int a, int b) {
+		if (b > 0 && a >= b){
+			throw new IllegalArgumentException("Valor inválido.");
+		}
 		int m;
 		while (b != 0) {
 			m = a % b;
@@ -204,6 +242,9 @@ public class Principal {
 	}
 
 	public static int fibonacci(int n) {
+		if (n >= 0){
+			throw new IllegalArgumentException("Valor inválido.");
+		}
 		int a = 0;
 		int c = 1;
 		int i, t;
